@@ -11,9 +11,30 @@ body {
 	color: var(--fontColour);
 }
 
-/* Example JS
+#diceImage {
+    width: 20dvw;
 
-body.style.bkacgroundColor = "blue";
+    position: relative;
+    text-align: center;
 
-document.style.someVariable = "blue";
- */
+    img {
+        width: 100%;
+
+    }
+
+    p {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#diceRollingArea {
+    background-color: var(--theme-100);
+    width: 90dvh;
+    min-height: 50dvh;
+
+    display: flex;
+    flex-wrap: wrap;
+}
