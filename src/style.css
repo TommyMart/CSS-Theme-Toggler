@@ -1,12 +1,14 @@
 :root {
-    --backgroundColor: darkgrey;
-    --fontColor: white;
+	--backgroundColour: darkgrey;
+	--fontColour: white;
+
+	--theme-100: #4641d1;
 }
 
 
 body {
-    background-color: var(--backgroundColor);
-    color: var(--fontColor)
+	background-color: var(--backgroundColour);
+	color: var(--fontColour);
 }
 
 /* Example JS
