@@ -1,40 +1,186 @@
 :root {
-	--backgroundColour: darkgrey;
+	--backgroundColour: rgb(63, 61, 61);
 	--fontColour: white;
 
-	--theme-100: #4641d1;
+	--theme-100: #b592f3;
+}
+
+#diceSizeButton {
+    /* margin-left: 5dvw; */
+    font-family: Nunito+Sans;
+    margin-top: 2dvw;
+    padding: 10px 20px; /* Add padding for better spacing */
+    font-size: 1em; /* Slightly larger font size */
+    color: white; /* Text color */
+    background: #7636e6; /* Button color */
+    margin-bottom: 2dvw;
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer */
+    /* box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); Subtle shadow for depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+
+}
+
+#diceSizeButton:hover {
+    background: #a07cd1; /* Slightly darker shade on hover */
+    /* box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3); Enhance shadow on hover */
+}
+
+#diceSizeButton:active {
+    background: #8e6bbd; /* Even darker shade on click */
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); Soften shadow on click */
+}
+
+#themeToggle {
+    /* margin-left: 5dvw; */
+    font-family: Nunito+Sans;
+    margin-top: 2dvw;
+    padding: 10px 20px; /* Add padding for better spacing */
+    font-size: 1em; /* Slightly larger font size */
+    color: white; /* Text color */
+    background: #7636e6; /* Button color */
+    margin-bottom: 2dvw;
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Round the corners */
+    cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); Subtle shadow for depth
+    /* transition: background 0.3s ease, box-shadow 0.3s ease; Smooth transitions */
+
+
+}
+
+#themeToggle:hover {
+    background: #a07cd1; /* Slightly darker shade on hover */
+    /* box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3); Enhance shadow on hover */
+}
+
+#themeToggle:active {
+    background: #8e6bbd; /* Even darker shade on click */
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); Soften shadow on click */
+}
+
+#diceSizeDiv {
+    margin-bottom: 2dvw;
+}
+h1 {
+    font-family: 'Handjet';
+    font-size: 7dvw;
+    
+    /* padding-left: 5dvw; */
+    /* margin-left: 5dvw; */
+    margin-bottom: 0%;
+
+}
+
+#explanation {
+    font-family: 'Handjet';
+    font-size: 2dvw;
+    margin-top: 0;
+    /* padding-left: 5dvw; */
+    margin-left: 5dvw;
 }
 
 
 body {
-	background-color: var(--backgroundColour);
+	
+    margin: 5dvw;
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    background-color: var(--backgroundColour);
 	color: var(--fontColour);
 }
 
+
+
 #diceImage {
-    width: 20dvw;
-
+    width: 6dvw;
+    height: 6dvw;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-
+    padding: 20px;
+    
     img {
         width: 100%;
 
     }
+    
 
-    p {
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #diceTextOutput {
+    position: absolute;
+    color: white;
+    
+    /* top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    
     }
 }
 
+/* Keyframes for rotating the dice */
+@keyframes rotateDice {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply the animation to the dice image when it has the class 'rotate' */
+.rotate {
+    animation: rotateDice 1s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
 #diceRollingArea {
-    background-color: var(--theme-100);
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 20px;
+    border-color: rgb(190, 22, 22);
+    background-color: #2a9144;
     width: 90dvh;
     min-height: 50dvh;
+    margin-left: 5vw;
+    margin-right: 5vw;
 
     display: flex;
+    
     flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #diceRollingArea {
+        width: 95vw; /* Adjust width for smaller screens */
+        margin-left: 2vw; /* Reduce margin for smaller screens */
+        margin-right: 2vw; /* Reduce margin for smaller screens */
+    }
+
+    h1 {
+        font-size: 5vw; /* Adjust font size for smaller screens */
+    }
+
+    #explanation {
+        font-size: 1.5vw; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #diceRollingArea {
+        width: 100vw; /* Use full viewport width on very small screens */
+        margin-left: 0; /* Remove margin on very small screens */
+        margin-right: 10px; /* Remove margin on very small screens */
+    }
+
+    h1 {
+        font-size: 15vw; /* Further adjust font size for very small screens */
+    }
+
+    #explanation {
+        font-size: 1.2vw; /* Further adjust font size for very small screens */
+    }
 }

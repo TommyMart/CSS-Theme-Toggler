@@ -5,26 +5,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<h1>Example heading</h1>
 
-	<p>Cool paragraph text. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi quod iste rem velit dolor id quas, possimus magnam deserunt aut et dolorum, cum itaque dolores vel odio inventore repellendus minus!</p>
 
-	<button id="themeToggle">Toggle theme</button>
+	<h1>Dice Rolling App</h1>
 
+	<p id="explanation">Click dice, or drag to table for result.</p>
+
+
+
+    <!-- Dice image and result text -->
 	<div id="diceImage">
 		<img src="./D20-blue.png" alt="A blue d20 dice.">
-		<p id="diceTextOutput">20</p>
+		<p id="diceTextOutput"></p>
 	</div>
 
+    <div id="diceSizeDiv">
+        <!-- Input for dice size and button to update -->
+        <input id="diceSizeInput" type="text" placeholder="Enter Dice Size 1-20">
+        <button id="updateDiceSizeButton">Set Dice Size</button>
+        <button id="resetTableButton">Reset Table</button>
+    </div>
+    
+
+    <!-- Area to drop the dice with new result -->
 	<div id="diceRollingArea">
 
 	</div>
+    <!-- Toggle style theme between dark and light button -->
+	<button id="themeToggle">Toggle theme</button>
+
+
+    
 
 	<script src="./cssThemeToggler.js"></script>
-
 	<script src="./diceDropper.js"></script>
 </body>
 </html>

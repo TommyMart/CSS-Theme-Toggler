@@ -7,7 +7,7 @@ let themes = [
 	{
 		name: "dark",
 		properties: {
-			backgroundColour: "darkgrey",
+			backgroundColour: "rgb(33, 32, 32)",
 			fontColour: "white",
 			"theme-100": "#4641d1"
 		}
@@ -15,7 +15,7 @@ let themes = [
 	{
 		name: "light",
 		properties: {
-			backgroundColour: "#87E0E0",
+			backgroundColour: "#b592f3",
 			fontColour: "black"
 			,
 			"theme-100": "#87E0E0"
