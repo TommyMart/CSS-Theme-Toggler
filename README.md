@@ -1,31 +1,5 @@
-# CSS-Theme-Toggler
+# Dice Roller Application
 
+Deployed website [here](https://dicerollerapp321.netlify.app/).
 
-
-#themeToggle {
-    /* margin-left: 5dvw; */
-    font-family: Nunito+Sans;
-    margin-top: 2dvw;
-    padding: 10px 20px; /* Add padding for better spacing */
-    font-size: 1em; /* Slightly larger font size */
-    color: white; /* Text color */
-    background: #7636e6; /* Button color */
-    margin-bottom: 2dvw;
-    border: none; /* Remove default border */
-    border-radius: 8px; /* Round the corners */
-    cursor: pointer; /* Change cursor to pointer */
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); Subtle shadow for depth
-    /* transition: background 0.3s ease, box-shadow 0.3s ease; Smooth transitions */
-
-
-}
-
-#themeToggle:hover {
-    background: #a07cd1; /* Slightly darker shade on hover */
-    /* box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3); Enhance shadow on hover */
-}
-
-#themeToggle:active {
-    background: #8e6bbd; /* Even darker shade on click */
-    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); Soften shadow on click */
-}
+The dice rolling app is a dynamic and interactive tool designed to simulate the rolling of dice, offering users a visually appealing and engaging experience. Built using JavaScript, HTML, and CSS, the app allows users to input a desired dice size (ranging from 1 to 20 sides) and roll the dice to generate a random outcome. The app features responsive design elements, including a centered display for dice results and a stylized interface with a toggleable theme. Enhanced with animations and thoughtful CSS styling, the app is both functional and visually captivating, making it a fun way to explore programming concepts and UI design.
