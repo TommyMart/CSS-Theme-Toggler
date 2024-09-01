@@ -36,12 +36,18 @@ function drop(event){
 	// Finds the p element inside the cloned diceCopy where the roll
 	// dice result will be displayed
 	let diceCopyText = diceCopy.querySelector("p");
+	// Rolls the dice
+	const rollValue = rollDice();
 	// Sets text inside cloned dice to equal return of the rollDice
 	// function, random number between 1 and 20
-	diceCopyText.innerText = rollDice();
+	diceCopyText.innerText = rollValue;
 	// Drops the copied dice image and rolled number to the area where
 	// the dice was dropped. Appends as child to parent node 
 	event.target.appendChild(diceCopy);
+
+	if (gamestarted) {
+		updateScore(rollValue);
+	}
 }
 
 // Function that simulates the rolling of a dice
