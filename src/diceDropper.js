@@ -124,5 +124,3 @@ document.getElementById("updateDiceSizeButton").addEventListener("click", update
 
 let resetTableButton = document.getElementById("resetTableButton");
 resetTableButton.addEventListener("click", resetTable);
-// Set default dice size when page loads
-window.onload = setDefaultDiceSize;

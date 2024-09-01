@@ -27,12 +27,16 @@
 		<p id="diceTextOutput"></p>
 	</div>
 
-    <div id="diceSizeDiv">
-        <!-- Input for dice size and button to update -->
-        <input id="diceSizeInput" type="text" placeholder="Enter Dice Size 1-20">
-        <button id="updateDiceSizeButton">Set Dice Size</button>
-        
+    <div id="parentContainer">
+        <button id="startGameButton">Start Game</button>
+        <button id="resetGameButton">Reset Game</button>
+        <div id="game1UI">
+            <div id="scoreDisplay">Score: 0</div>
+            <div id="rollCountDisplay">Rolls: 0</div>
+            
+        </div>
     </div>
+    
     
 
     <!-- Area to drop the dice with new result -->
@@ -43,6 +47,12 @@
         <!-- Toggle style theme between dark and light button -->
         <button id="themeToggle">Toggle theme</button>
         <button id="resetTableButton">Reset Table</button>
+        <div id="diceSizeDiv">
+            <!-- Input for dice size and button to update -->
+            <input id="diceSizeInput" type="text" placeholder="Enter Dice Size 1-20">
+            <button id="updateDiceSizeButton">Set Dice Size</button>
+            
+        </div>
     </div>
 
 
@@ -51,5 +61,6 @@
 
 	<script src="./cssThemeToggler.js"></script>
 	<script src="./diceDropper.js"></script>
+    <script src="diceGame.js"></script>
 </body>
 </html>

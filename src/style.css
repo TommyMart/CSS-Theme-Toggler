@@ -35,7 +35,7 @@
 
 
 #diceSizeDiv {
-    margin-bottom: 2dvw;
+    margin-bottom: .5vh ;
 }
 
 #bottomButtons {
@@ -81,7 +81,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
+    padding: 2vh;
     
     img {
         width: 100%;
@@ -99,6 +99,44 @@ body {
     
     }
 }
+
+#themeToggle {
+    margin-right: 1dvh;
+}
+#resetTableButton {
+    margin-right: 1dvh;
+}
+
+#bottomButtons {
+    display: flex;
+    align-items: flex-start;
+
+}
+    
+#scoreDisplay {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 1vw;
+    
+}
+
+#rollCountDisplay {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin-right: 1vw;
+}
+
+#game1UI {
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
 
 /* Keyframes for rotating the dice */
 @keyframes rotateDice {
@@ -125,7 +163,7 @@ body {
     min-height: 50dvh;
     margin-left: 5vw;
     margin-right: 5vw;
-
+    
     display: flex;
     
     flex-wrap: wrap;
