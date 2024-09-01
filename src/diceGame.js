@@ -11,12 +11,15 @@ let rollCount = 0;
 // Game not started until clicked
 let gamestarted = false;
 
+
 // Function to update score 
 function updateScore(rollValue) {
     // Add dice result to current score
     currentScore += rollValue;
     // Add one to roll count
     rollCount++;
+
+    console.log(rollValue)
 
     // Update UI with current score and roll count
     document.getElementById("scoreDisplay").innerText = `Score: ${currentScore}`;
@@ -48,15 +51,17 @@ function resetGame() {
 }
 
 // Function to handle dice rolls
-function handleDiceRoll() {
-    // Roll dice by calling function
-    const rollValue = rollDice(); 
+// function handleDiceRoll() {
+//     // Roll dice by calling function
+    
+//     const rollValue = rollDice(); 
+//     console.log(rollValue)
 
-    // If game started, update score
-    if (gamestarted) {
-        updateScore(rollValue);
-    } 
-}
+//     // If game started, update score
+//     if (gamestarted) {
+//         updateScore(rollValue);
+//     } 
+// }
 
 // Function to start the game
 function startGame() {
@@ -64,6 +69,8 @@ function startGame() {
     resetGame();
     // Start the game
     gamestarted = true;
+
+    console.log("Start game");
     // Notify user the game has started
     alert("Game started! Click or drag dice to table to play.");
 
@@ -72,7 +79,7 @@ function startGame() {
 // Event listener for reset button, called reset game when clicked
 document.getElementById("resetGameButton").addEventListener("click", resetGame);
 // Event listener for dice image click, called handle dice roll
-document.getElementById("diceImage").addEventListener("click", handleDiceRoll);
+// document.getElementById("diceImage").addEventListener("click", handleDiceRoll);
 // Event listener for start game, calls start game function when clicked
 document.getElementById("startGameButton").addEventListener("click", startGame);
 

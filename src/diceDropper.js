@@ -37,10 +37,11 @@ function drop(event){
 	// dice result will be displayed
 	let diceCopyText = diceCopy.querySelector("p");
 	// Rolls the dice
-	// const rollValue = rollDice();
+	let rollValue = rollDice();
 	// Sets text inside cloned dice to equal return of the rollDice
 	// function, random number between 1 and 20
-	diceCopyText.innerText = rollDice();
+	diceCopyText.innerText = rollValue;
+	console.log(rollValue)
 	// Drops the copied dice image and rolled number to the area where
 	// the dice was dropped. Appends as child to parent node 
 	event.target.appendChild(diceCopy);
@@ -66,9 +67,10 @@ function handleDiceClick() {
 
     // Find the p element inside the cloned diceCopy where the roll result will be displayed
     let diceCopyText = diceCopy.querySelector("p");
-
-    // Set text inside cloned dice to the result of rollDice function
-    diceCopyText.innerText = rollDice();
+	console.log(diceCopyText);
+	rollValue = rollDice();
+	// Set text inside cloned dice to the result of rollDice function
+    diceCopyText.innerText = rollValue;
 
     // Append the copied dice image and rolled number to the dice rolling area
     document.getElementById("diceRollingArea").appendChild(diceCopy);
@@ -80,6 +82,11 @@ function handleDiceClick() {
     diceElement.addEventListener("animationend", () => {
         diceElement.classList.remove("rotate");
     }, { once: true });
+
+	if (gamestarted) {
+		updateScore(rollValue);
+	}
+	
 }
 
 function updateDiceSize() {
@@ -115,6 +122,7 @@ let diceElement = document.getElementById("diceImage");
 // Attches the drag function to the dice image so it triggers when 
 // dragging starts
 diceElement.addEventListener("dragstart", (event) => drag(event));
+diceElement.addEventListener("click", (event) => drop(event));
 // Enables diceElement to be draggable
 diceElement.draggable = true;
 // Create variable of html id diceRollingArea 
